@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0hgkd46" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.2.3">
+  <decision id="ruleset1" name="sampleDecision">
+    <extensionElements>
+      <biodi:bounds x="157" y="81" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1">
+      <input id="input_1" label="Alpha" camunda:inputVariable="alpha">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1yyf2eo" label="Beta" camunda:inputVariable="beta">
+        <inputExpression id="LiteralExpression_0tbm8ly" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Result" name="result" typeRef="string" />
+      <rule id="DecisionRule_1pxtsp9">
+        <inputEntry id="UnaryTests_0jci768">
+          <text>"Sommer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mat8i2">
+          <text>1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04nym2x">
+          <text>"Sommer_1"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i731bl">
+        <inputEntry id="UnaryTests_0wfsv2w">
+          <text>"Winter"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jiibui">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16wuhv6">
+          <text>"Winter_2"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00tr5qr">
+        <inputEntry id="UnaryTests_0w04692">
+          <text>"Sommer"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wpsdrl">
+          <text>&gt; 1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ga8k5v">
+          <text>"Sommer"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
